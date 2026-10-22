@@ -1,0 +1,27 @@
+server:
+  port: 8080
+app:
+  shortener:
+    # Set SHORTENER_BASE_URL to the trusted public origin in non-local environments.
+    # Do not derive this value from an arbitrary incoming Host header.
+    base-url: ${SHORTENER_BASE_URL:http://localhost:8080}
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shortener
+    username: shortener
+    password: shortener
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
