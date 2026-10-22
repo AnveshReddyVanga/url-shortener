@@ -1,0 +1,4 @@
+**/target/\n**/.venv/\n**/__pycache__/\n**/.pytest_cache/\n.env\n*.pyc\n**/.env
+/services/orchestrator/.venv/
+/.idea/
+/.vscode/
