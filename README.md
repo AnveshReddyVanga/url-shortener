@@ -1,4 +1,4 @@
-# Agentic Software Engineering System — URL Shortener
+# url-shortener: Agentic Software Engineering System — URL Shortener
 
 Reference prototype: Java 21/Spring Boot URL shortener + Python/FastAPI stateful orchestrator + OpenAI API integration.
 
